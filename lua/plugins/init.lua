@@ -9,7 +9,7 @@ return
 			vim.cmd([[colorscheme PaperColor]])
 		end
 	},
-	{	-- "gc" to comment visual regions/lines	
+	{	-- "gc" to comment visual regions/lines
 		'numToStr/Comment.nvim', opts = {} },
 	{
 		-- Add indentation guides even on blank lines
@@ -29,9 +29,9 @@ return
 	},
 	{	-- oil for tree explore
 		'stevearc/oil.nvim',
-		dependencies = { "nvim-tree/nvim-web-devicons" },	
-		lazy = false, 
-		config = function() 
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		lazy = false,
+		config = function()
 		require('oil').setup({
 			keymaps = {
     			["g?"] = "actions.show_help",
@@ -87,7 +87,7 @@ return
 				-- optionally define an integer/float for the exact width of the preview window
 				width = nil,
 				-- Height dimensions can be integers or a float between 0 and 1 (e.g. 0.4 for 40%)
-				-- min_height and max_height can be a single value or a list of mixed 
+				-- min_height and max_height can be a single value or a list of mixed
 				-- integer/float types.
 				-- max_height = {80, 0.9} means "the lesser of 80 columns or 90% of total"
 				max_height = 0.9,
@@ -100,7 +100,7 @@ return
 				-- Whether the preview window is automatically updated when the cursor is moved
 				update_on_cursor_moved = true,
 			},
-		}) 
+		})
 		end
 	},
 	'szw/vim-maximizer',
@@ -109,17 +109,8 @@ return
         branch = '0.1.x',
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
+	'echasnovski/mini.surround',
 
-	--{
-		-- tree
-		--'nvim-tree/nvim-tree.lua',
-		--requires = 'nvim-tree/nvim-web-devicons',
-		--sort = {sorter = "case_sensitive",},
-		--view = {width = 30,},
-		--renderer = {group_empty = true,},
-		--filters = {dotfiles = true,},
-	--},
 }
---minisrround
 --closing brackets pluggin
 --'szw/vim-maximizer'
