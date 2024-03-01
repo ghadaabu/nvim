@@ -11,3 +11,4 @@ set.shiftwidth = 0
 set.expandtab = false
 set.smarttab = true
 
+set.clipboard = "unnamedplus"

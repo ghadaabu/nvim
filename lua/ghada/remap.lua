@@ -29,11 +29,6 @@ vim.keymap.set("n", "<leader><leader>", ":source $MYVIMRC")
 
 vim.keymap.set("n", "<C-f>", ":NvimTreeFindFileToggle<CR>")
 
-vim.keymap.set("n", "<C-h>", "<C-w>h", {noremap = true, silent = false})
-vim.keymap.set("n", "<C-l>", "<C-w>l", {noremap = true, silent = false})
-vim.keymap.set("n", "<C-j>", "<C-w>j", {noremap = true, silent = false})
-vim.keymap.set("n", "<C-k>", "<C-w>k", {noremap = true, silent = false})
-
 vim.keymap.set("n", "gw", ":%s/\\s\\+$//e<CR>", { desc = "Remove trailing white spaces", })
 
 vim.keymap.set("n", "-", ":Oil<CR>", { silent = true, })
@@ -47,3 +42,13 @@ vim.keymap.set("n", "i", function()
     return "i"
   end
 end, { expr = true, desc = "properly indent on empty line when insert" })
+
+-- navigation
+vim.keymap.set({'n', 't'}, '<C-h>', '<CMD>NavigatorLeft<CR>')
+vim.keymap.set({'n', 't'}, '<C-l>', '<CMD>NavigatorRight<CR>')
+vim.keymap.set({'n', 't'}, '<C-j>', '<CMD>NavigatorDown<CR>')
+vim.keymap.set({'n', 't'}, '<C-k>', '<CMD>NavigatorUp<CR>')
+
+vim.keymap.set({"n", "x", "o"}, "s", function()
+  require('leap').leap({target_windows = {vim.api.nvim_get_current_win()}})
+end)

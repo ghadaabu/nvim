@@ -43,6 +43,9 @@ return
 		dependencies = { 'nvim-lua/plenary.nvim' }
 	},
 	'echasnovski/mini.surround',
+	'numToStr/Navigator.nvim',
+	'ojroques/nvim-osc52',
+	{'ggandor/leap.nvim', lazy = false,},
 
 }
 --closing brackets pluggin
