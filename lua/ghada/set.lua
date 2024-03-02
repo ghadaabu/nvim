@@ -12,3 +12,5 @@ set.expandtab = false
 set.smarttab = true
 
 set.clipboard = "unnamedplus"
+
+set.scrolloff = 999
