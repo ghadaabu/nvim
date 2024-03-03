@@ -14,3 +14,7 @@ set.smarttab = true
 set.clipboard = "unnamedplus"
 
 set.scrolloff = 999
+
+set.autoindent = true
+set.smartindent = true
+set.breakindent = true
