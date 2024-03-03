@@ -40,6 +40,7 @@ return
 	'numToStr/Navigator.nvim',
 	'ojroques/nvim-osc52',
 	{'ggandor/leap.nvim', lazy = false,},
+	'lewis6991/gitsigns.nvim',
 
 }
 --closing brackets pluggin
