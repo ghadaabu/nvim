@@ -25,13 +25,16 @@ vim.keymap.set("n", "<C-d>", "yyp")
 -- Remap to duplicate a block in visual mode
 vim.keymap.set("v", "<C-d>", "yp")
 
-vim.keymap.set("n", "<leader><leader>", ":source $MYVIMRC")
+vim.keymap.set("n", "<leader><leader>", ":source $MYVIMRC<CR>")
 
 vim.keymap.set("n", "<C-f>", ":NvimTreeFindFileToggle<CR>")
 
 vim.keymap.set("n", "gw", ":%s/\\s\\+$//e<CR>", { desc = "Remove trailing white spaces", })
 
 vim.keymap.set("n", "-", ":Oil<CR>", { silent = true, })
+
+-- copies the directory path of the current file
+vim.keymap.set("n", "<leader>p", ':let @+=expand("%:p:h")<CR>', { silent = true, })
 
 vim.keymap.set("n", "<leader>/", ":noh<CR>", {desc = "Remove highlight", silent = true, })
 
