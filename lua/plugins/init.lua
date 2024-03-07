@@ -5,6 +5,13 @@ return
 		'NLKNguyen/papercolor-theme',
 		priority = 1000, -- make sure to load this before all the other plugins
 		config = function()
+			vim.g.PaperColor_Theme_Options = {
+				theme= {
+					default= {
+						transparent_background= 1 
+					}
+				}
+			}
 			--load the colorscheme
 			vim.cmd([[colorscheme PaperColor]])
 		end
@@ -41,6 +48,17 @@ return
 	'ojroques/nvim-osc52',
 	{'ggandor/leap.nvim', lazy = false,},
 	'lewis6991/gitsigns.nvim',
+	'deoplete-plugins/deoplete-clang',
+
+	-- lsp plugins for c/c++ enviroment
+	"williamboman/mason.nvim",
+	"williamboman/mason-lspconfig.nvim",
+	'neovim/nvim-lspconfig',
+	{'hrsh7th/nvim-cmp'},
+	{'hrsh7th/cmp-nvim-lsp'},
+	'folke/neodev.nvim',
+	'L3MON4D3/LuaSnip',
+	'voldikss/vim-floaterm',
 
 }
 --closing brackets pluggin
