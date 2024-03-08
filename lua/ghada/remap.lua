@@ -38,6 +38,9 @@ vim.keymap.set("n", "<leader>p", ':let @+=expand("%:p:h")<CR>', { silent = true,
 
 vim.keymap.set("n", "<leader>/", ":noh<CR>", {desc = "Remove highlight", silent = true, })
 
+-- select all (ctrl+a)
+vim.keymap.set("n", "<leader>a", ":keepjumps normal! ggVG<cr>")
+
 vim.keymap.set("n", "i", function()
   if #vim.fn.getline(".") == 0 then
     return [["_cc]]
