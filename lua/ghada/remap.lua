@@ -20,10 +20,10 @@ vim.keymap.set("n", "<leader>n", "o<Esc>")
 vim.keymap.set("n", "<leader>N", "O<Esc>")
 
 -- Remap to duplicate line in normal mode
-vim.keymap.set("n", "<C-d>", "yyp")
+vim.keymap.set("n", "<C-c>", "yyp")
 
 -- Remap to duplicate a block in visual mode
-vim.keymap.set("v", "<C-d>", "yp")
+vim.keymap.set("v", "<C-c>", "yp")
 
 vim.keymap.set("n", "<leader><leader>", ":source $MYVIMRC<CR>")
 
