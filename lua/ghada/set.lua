@@ -18,3 +18,6 @@ set.scrolloff = 999
 set.autoindent = true
 set.smartindent = true
 set.breakindent = true
+
+-- Set completeopt to have a better completion experience
+set.completeopt = 'menuone,noselect'
