@@ -59,7 +59,14 @@ return
 	'folke/neodev.nvim',
 	'L3MON4D3/LuaSnip',
 	'voldikss/vim-floaterm',
-
+	-- "otavioschwanck/arrow.nvim",
+	{
+		'windwp/windline.nvim',
+		config = function ()
+			-- vim.g.windline_disable_responsive = 1
+			vim.cmd([[autocmd ColorScheme * call windline#disable() | call windline#enable() ]])
+		end
+	},
 }
 --closing brackets pluggin
 --'szw/vim-maximizer'
