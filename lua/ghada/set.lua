@@ -2,9 +2,6 @@ local set = vim.opt
 set.relativenumber = true
 set.number = true
 
--- set.termguicolors = true
-
-
 set.tabstop = 4
 set.softtabstop = 0
 set.shiftwidth = 0
@@ -21,3 +18,5 @@ set.breakindent = true
 
 -- Set completeopt to have a better completion experience
 set.completeopt = 'menuone,noselect'
+
+set.termguicolors = flase

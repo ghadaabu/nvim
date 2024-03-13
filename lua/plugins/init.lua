@@ -44,7 +44,13 @@ return
 		dependencies = { 'nvim-lua/plenary.nvim' }
 	},
 	'echasnovski/mini.surround',
-	'numToStr/Navigator.nvim',
+	{
+		'numToStr/Navigator.nvim',
+		lazy = false,
+		config = function()
+			require('Navigator').setup()
+		end
+	},
 	'ojroques/nvim-osc52',
 	{'ggandor/leap.nvim', lazy = false,},
 	'lewis6991/gitsigns.nvim',
@@ -59,7 +65,7 @@ return
 	'folke/neodev.nvim',
 	'L3MON4D3/LuaSnip',
 	'voldikss/vim-floaterm',
-	-- "otavioschwanck/arrow.nvim",
+	"otavioschwanck/arrow.nvim",
 	{
 		'windwp/windline.nvim',
 		config = function ()
