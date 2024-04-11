@@ -8,7 +8,7 @@ return
 			vim.g.PaperColor_Theme_Options = {
 				theme= {
 					default= {
-						transparent_background= 1 
+						transparent_background= 1
 					}
 				}
 			}
@@ -17,12 +17,12 @@ return
 		end
 	},
 	{	-- "gc" to comment visual regions/lines
-	'numToStr/Comment.nvim', opts = {} 
+	'numToStr/Comment.nvim', opts = {}
 	},
-	{ 
-		'echasnovski/mini.indentscope', 
-		config = function() require('mini.indentscope').setup() 
-		end 
+	{
+		'echasnovski/mini.indentscope',
+		config = function() require('mini.indentscope').setup()
+		end
 	},
 	{   -- Highlight, edit, and navigate code
 		'nvim-treesitter/nvim-treesitter',
