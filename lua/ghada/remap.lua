@@ -8,16 +8,16 @@ vim.keymap.set("n", "dd", "\"_d_")
 vim.keymap.set({"n", "x"}, "x", "\"_x")
 
 -- Remap to quick rearrange lines in visual mode
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "rearrange lines in visual mode", })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "rearrange lines in visual mode", })
 
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- Remap to add new line
-vim.keymap.set("n", "<leader>n", "o<Esc>")
-vim.keymap.set("n", "<leader>N", "O<Esc>")
+vim.keymap.set("n", "<leader>n", "o<Esc>", { desc = "Add new line after", })
+vim.keymap.set("n", "<leader>N", "O<Esc>", { desc = "Add new line before", })
 
 -- Remap to duplicate line in normal mode
 vim.keymap.set("n", "<C-c>", "yyp")
@@ -25,22 +25,24 @@ vim.keymap.set("n", "<C-c>", "yyp")
 -- Remap to duplicate a block in visual mode
 vim.keymap.set("v", "<C-c>", "yp")
 
-vim.keymap.set("n", "<leader><leader>", ":source $MYVIMRC<CR>")
+vim.keymap.set("n", "<leader><leader>", ":source $MYVIMRC<CR>", { desc = "source file", })
 
-vim.keymap.set("n", "<C-f>", ":NvimTreeFindFileToggle<CR>")
+-- vim.keymap.set("n", "<C-f>", ":NvimTreeFindFileToggle<CR>")
 
 vim.keymap.set("n", "gw", ":%s/\\s\\+$//e<CR>", { desc = "Remove trailing white spaces", })
 
+-- oil navigation
 vim.keymap.set("n", "-", ":Oil<CR>", { silent = true, })
 
 -- copies the directory path of the current file
-vim.keymap.set("n", "<leader>p", ':let @+=expand("%:p:h")<CR>', { silent = true, })
+vim.keymap.set("n", "<leader>p", ':let @+=expand("%:p:h")<CR>', { silent = true, desc = "copy the directory path of the current file", })
 
 vim.keymap.set("n", "<leader>/", ":noh<CR>", {desc = "Remove highlight", silent = true, })
 
 -- select all (ctrl+a)
-vim.keymap.set("n", "<leader>a", ":keepjumps normal! ggVG<cr>")
+vim.keymap.set("n", "<leader>a", ":keepjumps normal! ggVG<cr>", { desc = "select all (ctrl+a)", })
 
+-- properly indent on empty line when insert
 vim.keymap.set("n", "i", function()
   if #vim.fn.getline(".") == 0 then
     return [["_cc]]
