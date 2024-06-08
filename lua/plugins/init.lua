@@ -73,6 +73,16 @@ return
 			vim.cmd([[autocmd ColorScheme * call windline#disable() | call windline#enable() ]])
 		end
 	},
+	{
+		"rachartier/tiny-devicons-auto-colors.nvim",
+		dependencies = {
+			"nvim-tree/nvim-web-devicons"
+		},
+		event = "VeryLazy",
+		config = function()
+			require('tiny-devicons-auto-colors').setup()
+		end
+	},
 }
 --closing brackets pluggin
 --'szw/vim-maximizer'
