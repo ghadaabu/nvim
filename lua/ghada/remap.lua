@@ -1,7 +1,7 @@
 -- vim.api.nvim_set_keymap('n', '<leader>x', ':Vexplore<CR>', { noremap = true, silent = true })
 
 -- vim.keymap.set("i", "<C-i>", "<Esc>")
-vim.keymap.set("i", "ii", "<Esc>")
+vim.keymap.set("i", "qq", "<Esc>")
 
 vim.keymap.set("n", "<leader>d", "dd")
 vim.keymap.set("n", "dd", "\"_d_")
